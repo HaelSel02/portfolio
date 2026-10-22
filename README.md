@@ -7,7 +7,7 @@ Bienvenido a mi repositorio del portfolio personal. Este sitio web fue desarroll
 ## 🚀 Demo en Vivo
 
 Puedes ver mi portfolio en línea visitando el siguiente enlace:
-👉 **[Ver Portfolio](https://tu-usuario.github.io/tu-repositorio/)**
+👉 **[Ver Portfolio](https://joelgallo.netlify.app/)**
 
 ---
 
@@ -78,8 +78,8 @@ Para clonar y visualizar este proyecto localmente en tu ordenador:
 
 - **Email:** [crastwtf@gmail.com](mailto:crastwtf@gmail.com)
 - **Ubicación:** Xirivella (Valencia, España)
-- **LinkedIn:** [Tu Perfil de LinkedIn](https://www.linkedin.com/in/derek-joel-gallo-achig/)
-- **GitHub:** [Tu Perfil de GitHub](https://github.com/HaelSel02)
+- **LinkedIn:** [Mi perfil de LinkedIn](https://www.linkedin.com/in/derek-joel-gallo-achig/)
+- **GitHub:** [Mi perfil de GitHub](https://github.com/HaelSel02)
 
 ---
 
