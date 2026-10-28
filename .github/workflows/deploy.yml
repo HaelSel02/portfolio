@@ -1,0 +1,23 @@
+name: Deploy por SSH
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Sincronizar con IONOS
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --exclude=".git" --exclude=".github" --exclude="node_modules"
+          path: ./
+          remote_path: ./public/
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_port: ${{ secrets.SSH_PORT }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
