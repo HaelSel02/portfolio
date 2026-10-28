@@ -18,6 +18,6 @@ jobs:
           path: ./
           remote_path: ./public/
           remote_host: ${{ secrets.SSH_HOST }}
-          remote_port: ${{ secrets.SSH_PORT }}
+          remote_port: 22
           remote_user: ${{ secrets.SSH_USER }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
