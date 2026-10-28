@@ -6,23 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Joel Gallo · Desarrollador de Aplicaciones Web</title>
   <meta name="description" content="Portfolio de Joel Gallo, Técnico Superior en Desarrollo de Aplicaciones Web (DAW).">
+  <meta name="theme-color" content="#08141d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/styles.css">
   <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <div class="wrap">
-    <nav aria-label="Principal">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <nav aria-label="Principal">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Inicio">JG<span>.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+      <div class="nav-links" id="menu">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
 
+  <div class="wrap" id="top">
     <header class="hero">
       <div>
         <h1>Hola, soy Joel Gallo. Desarrollador de aplicaciones web y técnico informático.</h1>
@@ -34,25 +42,24 @@
         </div>
       </div>
       <div id="div_img">
-        <img id="img_portfolio" src="assets/foto_portfolio.jfif"/>
-        <pre aria-label="Resumen en código"><span class="k">const</span> yo = {
-              nombre: <span class="s">"Derek Joel Gallo Achig"</span>,
-              titulo: <span class="s">"DAW & SMR"</span>,
-              ubicacion: <span class="s">"Valencia, España"</span>,
-              lenguajes: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>, <span class="s">"PHP"</span>, <span class="s">"Java"</span>],
-              disponible: <span class="k">true</span>,
-              };
-      </pre>
+        <img id="img_portfolio" src="assets/foto_portfolio.jfif" alt="Retrato de Joel Gallo" width="460" height="460">
+<pre aria-label="Resumen en código"><span class="k">const</span> yo = {
+  nombre: <span class="s">"Derek Joel Gallo Achig"</span>,
+  titulo: <span class="s">"DAW &amp; SMR"</span>,
+  ubicacion: <span class="s">"Valencia, España"</span>,
+  lenguajes: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>,
+              <span class="s">"PHP"</span>, <span class="s">"Java"</span>],
+  disponible: <span class="k">true</span>,
+};</pre>
       </div>
-
     </header>
 
     <section id="proyectos">
       <h2>Proyectos destacados</h2>
       <div class="projects">
         <article class="project">
-        <h3>ReformDidad - Trabajo de Fin de Grado (TFG)</h3>
-        <p class="muted">Desarrollo integral desde cero de una plataforma web orientada a la gestión de reformas. Programación de la lógica de negocio en backend, estructuración de bases de datos relacionales y diseño de una interfaz adaptable y moderna.</p>
+          <h3>ReformDidad - Trabajo de Fin de Grado (TFG)</h3>
+          <p class="muted">Desarrollo integral desde cero de una plataforma web orientada a la gestión de reformas. Programación de la lógica de negocio en backend, estructuración de bases de datos relacionales y diseño de una interfaz adaptable y moderna.</p>
           <ul class="tags">
             <li>PHP</li>
             <li>HTML</li>
@@ -60,12 +67,15 @@
             <li>JavaScript</li>
             <li>Bootstrap</li>
           </ul>
-          <div class="links"><a href="https://github.com/" rel="noopener">Código en GitHub</a><a href="#contacto">Demo</a></div>
+          <div class="links">
+            <a href="https://github.com/HaelSel02/ReformDidad" target="_blank" rel="noopener">Código en GitHub</a>
+            <a href="https://joelgallo.com/reformdidad/" target="_blank" rel="noopener">Demo</a>
+          </div>
         </article>
 
         <article class="project">
-        <h3>IMM Ingeniería - Trabajo de Formación en Centro de Trabajo (FCT)</h3>
-        <p class="muted">Creación de la plataforma web oficial para la empresa IMM Ingeniería en Valencia. Responsable del ciclo completo del proyecto durante la FCT: estructuración del sitio en WordPress, diseño con Elementor y ajustes técnicos personalizados en backend y frontend.</p>
+          <h3>IMM Ingeniería - Formación en Centro de Trabajo (FCT)</h3>
+          <p class="muted">Creación de la plataforma web oficial para la empresa IMM Ingeniería en Valencia. Responsable del ciclo completo del proyecto durante la FCT: estructuración del sitio en WordPress, diseño con Elementor y ajustes técnicos personalizados en backend y frontend.</p>
           <ul class="tags">
             <li>WordPress</li>
             <li>Elementor</li>
@@ -73,9 +83,10 @@
             <li>CSS</li>
             <li>JavaScript</li>
           </ul>
-          <div class="links"><a href="https://www.immingenieria.com/">Demo</a></div>
+          <div class="links">
+            <a href="https://www.immingenieria.com/" target="_blank" rel="noopener">Demo</a>
+          </div>
         </article>
-
       </div>
     </section>
 
@@ -88,7 +99,7 @@
         <p>Busco un equipo donde crecer, recibir feedback y aportar desde el primer día.</p>
       </div>
       <div class="edu">
-        <h3>Formación Académica</h3>
+        <h3>Formación académica</h3>
         <p class="muted"><strong>Técnico en Sistemas Microinformáticos y Redes (SMR)</strong><br>IES Doctor Faustí
           Barberà (Alaquàs, Valencia) · 2020 - 2022</p>
         <p class="muted"><strong>Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</strong><br>CFP Solvam (Quart
@@ -101,13 +112,13 @@
       <h2>Habilidades</h2>
       <div class="skills">
         <div>
-          <h3>Lenguajes y Desarrollo</h3>
+          <h3>Lenguajes y desarrollo</h3>
           <ul>
-            <li>HTML & CSS</li>
+            <li>HTML &amp; CSS</li>
             <li>JavaScript</li>
             <li>PHP</li>
             <li>Java</li>
-            <li>WordPress & Elementor</li>
+            <li>WordPress &amp; Elementor</li>
           </ul>
         </div>
         <div>
@@ -134,13 +145,28 @@
       <p class="muted">¿Tienes una oferta o un proyecto? Escríbeme y te respondo en menos de 24 horas.</p>
       <a class="big-mail" href="mailto:crastwtf@gmail.com">crastwtf@gmail.com</a>
       <div class="btns">
-        <a class="btn ghost" href="https://github.com/HaelSel02">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/derek-joel-gallo-achig/">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/HaelSel02" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/derek-joel-gallo-achig/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
 
     <footer>© 2026 Derek Joel Gallo Achig</footer>
   </div>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('menu');
+      function setOpen(open) {
+        menu.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open);
+        btn.textContent = open ? '✕' : '☰';
+        btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      }
+      btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+      menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+    })();
+  </script>
 </body>
 
 </html>
