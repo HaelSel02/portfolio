@@ -7,7 +7,7 @@ Bienvenido a mi repositorio del portfolio personal. Este sitio web fue desarroll
 ## 🚀 Demo en Vivo
 
 Puedes ver mi portfolio en línea visitando el siguiente enlace:
-👉 **[Ver Portfolio](https://joelgallo.netlify.app/)**
+👉 **[Ver Portfolio](https://joelgallo.com/)**
 
 ---
 
