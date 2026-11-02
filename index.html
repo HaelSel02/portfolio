@@ -57,7 +57,13 @@
       <h2>Proyectos destacados</h2>
       <div class="projects">
         <article class="project">
-          <h3>ReformDidad - Trabajo de Fin de Grado (TFG)</h3>
+          <div class="project-head">
+            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/reformdidad.png" alt="Captura de ReformDidad" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
+            <div>
+              <span class="status done">Terminado</span>
+              <h3>ReformDidad - Trabajo de Fin de Grado (TFG)</h3>
+            </div>
+          </div>
           <p class="muted">Desarrollo integral desde cero de una plataforma web orientada a la gestión de reformas. Programación de la lógica de negocio en backend, estructuración de bases de datos relacionales y diseño de una interfaz adaptable y moderna.</p>
           <ul class="tags">
             <li>PHP</li>
@@ -73,7 +79,13 @@
         </article>
 
         <article class="project">
-          <h3>IMM Ingeniería - Formación en Centro de Trabajo (FCT)</h3>
+          <div class="project-head">
+            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/imm-ingenieria.png" alt="Captura de la web de IMM Ingeniería" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
+            <div>
+              <span class="status done">Terminado</span>
+              <h3>IMM Ingeniería - Formación en Centro de Trabajo (FCT)</h3>
+            </div>
+          </div>
           <p class="muted">Creación de la plataforma web oficial para la empresa IMM Ingeniería en Valencia. Responsable del ciclo completo del proyecto durante la FCT: estructuración del sitio en WordPress, diseño con Elementor y ajustes técnicos personalizados en backend y frontend.</p>
           <ul class="tags">
             <li>WordPress</li>
@@ -86,7 +98,34 @@
             <a href="https://www.immingenieria.com/" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
+
+        <article class="project">
+          <div class="project-head">
+            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/compshark.png" alt="Captura de CompShark" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
+            <div>
+              <span class="status wip">En proceso</span>
+              <h3>CompShark - Tienda Online (Proyecto propio)</h3>
+            </div>
+          </div>
+          <p class="muted">Desarrollo de una tienda online sobre periféricos / componentes de PC. Creado principalmente con PrestaShop e incluyendo modulos propios</p>
+          <ul class="tags">
+            <li>PrestaShop</li>
+            <li>PHP</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
       </div>
+      <!-- Plantilla para un proyecto que solo es una idea:
+        <article class="project">
+          <div class="project-head">
+            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/idea.jpg" alt="Boceto" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
+            <div><span class="status idea">Idea</span><h3>Nombre del proyecto</h3></div>
+          </div>
+          <p class="muted">Descripción breve.</p>
+        </article>
+      -->
     </section>
 
     <section id="sobre-mi" class="about">
@@ -152,6 +191,11 @@
     <footer>© 2026 Derek Joel Gallo Achig</footer>
   </div>
 
+  <dialog id="lightbox" aria-label="Captura ampliada">
+    <button type="button" class="lb-close" aria-label="Cerrar">✕</button>
+    <img src="" alt="">
+  </dialog>
+
   <script>
     (function () {
       var btn = document.querySelector('.nav-toggle');
@@ -164,6 +208,21 @@
       }
       btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
       menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+    })();
+    (function () {
+      var dlg = document.getElementById('lightbox');
+      var big = dlg.querySelector('img');
+      document.querySelectorAll('.thumb').forEach(function (t) {
+        t.addEventListener('click', function () {
+          var img = t.querySelector('img');
+          if (!img) return;
+          big.src = img.currentSrc || img.src;
+          big.alt = img.alt;
+          dlg.showModal();
+        });
+      });
+      dlg.addEventListener('click', function (e) { if (e.target !== big) dlg.close(); });
+      dlg.addEventListener('close', function () { big.src = ''; });
     })();
   </script>
 </body>
