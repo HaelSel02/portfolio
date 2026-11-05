@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
   <nav aria-label="Principal">
     <div class="wrap nav-inner">
@@ -42,7 +43,7 @@
       </div>
       <div id="div_img">
         <img id="img_portfolio" src="assets/foto_portfolio.jfif" alt="Retrato de Joel Gallo" width="460" height="460">
-<pre aria-label="Resumen en código"><span class="k">const</span> yo = {
+        <pre aria-label="Resumen en código"><span class="k">const</span> yo = {
   nombre: <span class="s">"Derek Joel Gallo Achig"</span>,
   titulo: <span class="s">"DAW &amp; SMR"</span>,
   ubicacion: <span class="s">"Valencia, España"</span>,
@@ -58,13 +59,16 @@
       <div class="projects">
         <article class="project">
           <div class="project-head">
-            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/reformdidad.png" alt="Captura de ReformDidad" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
+            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/reformdidad.png"
+                alt="Captura de ReformDidad" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
             <div>
               <span class="status done">Terminado</span>
               <h3>ReformDidad - Trabajo de Fin de Grado (TFG)</h3>
             </div>
           </div>
-          <p class="muted">Desarrollo integral desde cero de una plataforma web orientada a la gestión de reformas. Programación de la lógica de negocio en backend, estructuración de bases de datos relacionales y diseño de una interfaz adaptable y moderna.</p>
+          <p class="muted">Desarrollo integral desde cero de una plataforma web orientada a la gestión de reformas.
+            Programación de la lógica de negocio en backend, estructuración de bases de datos relacionales y diseño de
+            una interfaz adaptable y moderna.</p>
           <ul class="tags">
             <li>PHP</li>
             <li>HTML</li>
@@ -80,13 +84,17 @@
 
         <article class="project">
           <div class="project-head">
-            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/imm-ingenieria.png" alt="Captura de la web de IMM Ingeniería" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
+            <button type="button" class="thumb" aria-label="Ampliar captura"><img
+                src="assets/proyectos/imm-ingenieria.png" alt="Captura de la web de IMM Ingeniería" width="160"
+                height="112" loading="lazy" onerror="this.remove()"></button>
             <div>
               <span class="status done">Terminado</span>
               <h3>IMM Ingeniería - Formación en Centro de Trabajo (FCT)</h3>
             </div>
           </div>
-          <p class="muted">Creación de la plataforma web oficial para la empresa IMM Ingeniería en Valencia. Responsable del ciclo completo del proyecto durante la FCT: estructuración del sitio en WordPress, diseño con Elementor y ajustes técnicos personalizados en backend y frontend.</p>
+          <p class="muted">Creación de la plataforma web oficial para la empresa IMM Ingeniería en Valencia. Responsable
+            del ciclo completo del proyecto durante la FCT: estructuración del sitio en WordPress, diseño con Elementor
+            y ajustes técnicos personalizados en backend y frontend.</p>
           <ul class="tags">
             <li>WordPress</li>
             <li>Elementor</li>
@@ -101,13 +109,15 @@
 
         <article class="project">
           <div class="project-head">
-            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/compshark.png" alt="Captura de CompShark" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
+            <button type="button" class="thumb" aria-label="Ampliar captura"><img src="assets/proyectos/compshark.png"
+                alt="Captura de CompShark" width="160" height="112" loading="lazy" onerror="this.remove()"></button>
             <div>
               <span class="status wip">En proceso</span>
               <h3>CompShark - Tienda Online (Proyecto propio)</h3>
             </div>
           </div>
-          <p class="muted">Desarrollo de una tienda online sobre periféricos / componentes de PC. Creado principalmente con PrestaShop e incluyendo modulos propios</p>
+          <p class="muted">Desarrollo de una tienda online sobre periféricos / componentes de PC. Creado principalmente
+            con PrestaShop e incluyendo modulos propios</p>
           <ul class="tags">
             <li>PrestaShop</li>
             <li>PHP</li>
@@ -115,6 +125,9 @@
             <li>HTML</li>
             <li>JavaScript</li>
           </ul>
+          <div class="links">
+            <a href="https://compshark.joelgallo.com/" target="_blank" rel="noopener">Demo</a>
+          </div>
         </article>
       </div>
       <!-- Plantilla para un proyecto que solo es una idea:
@@ -184,7 +197,8 @@
       <a class="big-mail" href="mailto:crastwtf@gmail.com">crastwtf@gmail.com</a>
       <div class="btns">
         <a class="btn ghost" href="https://github.com/HaelSel02" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/derek-joel-gallo-achig/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/derek-joel-gallo-achig/" target="_blank"
+          rel="noopener">LinkedIn</a>
       </div>
     </section>
 
@@ -206,8 +220,8 @@
         btn.textContent = open ? '✕' : '☰';
         btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
       }
-      btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
-      menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+      btn.addEventListener('click', function () {setOpen(!menu.classList.contains('open'));});
+      menu.addEventListener('click', function (e) {if (e.target.tagName === 'A') setOpen(false);});
     })();
     (function () {
       var dlg = document.getElementById('lightbox');
@@ -221,8 +235,8 @@
           dlg.showModal();
         });
       });
-      dlg.addEventListener('click', function (e) { if (e.target !== big) dlg.close(); });
-      dlg.addEventListener('close', function () { big.src = ''; });
+      dlg.addEventListener('click', function (e) {if (e.target !== big) dlg.close();});
+      dlg.addEventListener('close', function () {big.src = '';});
     })();
   </script>
 </body>
